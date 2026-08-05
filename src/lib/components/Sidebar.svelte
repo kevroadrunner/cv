@@ -61,19 +61,21 @@
   };
 </script>
 
-<aside class="inset-y-0 flex flex-col space-y-4 bg-accent p-6 md:fixed md:w-72">
-  <div class="flex justify-center">
-    <Avatar class="size-48 md:size-full">
-      <AvatarImage src={Me} alt={meta.name} />
-      <AvatarFallback>KR</AvatarFallback>
-    </Avatar>
-  </div>
-  <div class="border-y py-4 text-center md:text-left">
-    <Headline variant="h3" title={meta.name} />
-    <p class="text-muted-foreground">{meta.position}</p>
-    {#if meta.availableForWork}
-      <Badge variant="destructive">Available for work</Badge>
-    {/if}
+<aside class="inset-y-0 flex flex-col space-y-4 bg-accent p-6 sm:fixed sm:w-72">
+  <div class="flex gap-4 sm:flex-col">
+    <div class="shrink-1">
+      <Avatar class="size-32 sm:size-full">
+        <AvatarImage class="rounded-none sm:rounded-full" src={Me} alt={meta.name} />
+        <AvatarFallback>KR</AvatarFallback>
+      </Avatar>
+    </div>
+    <div class="flex-1 py-4">
+      <Headline variant="h3" title={meta.name} />
+      <p class="text-muted-foreground">{meta.position}</p>
+      {#if meta.availableForWork}
+        <Badge variant="destructive">Available for work</Badge>
+      {/if}
+    </div>
   </div>
   <nav class="flex shrink-0 flex-col space-y-2">
     {#each navItems as Item (Item.href)}
@@ -87,7 +89,7 @@
       </Button>
     {/each}
   </nav>
-  <div class="mt-auto flex flex-wrap justify-center gap-2 md:justify-between">
+  <div class="mt-auto flex flex-wrap justify-center gap-2 sm:justify-between">
     <Button variant="outline" size="icon" href={meta.social.homepage} target="_blank">
       <Ghost class="size-5" />
     </Button>

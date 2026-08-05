@@ -12,8 +12,8 @@
 
 <Sidebar />
 
-<main class="p-8 md:ml-72">
-  <div class="md:p-12 md:shadow-2xl">
+<main class="p-8 sm:ml-72">
+  <div class="sm:p-12 sm:shadow-2xl">
     {@render children()}
   </div>
 </main>
