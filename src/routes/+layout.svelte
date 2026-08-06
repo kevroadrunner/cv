@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-  <title>{meta.name}</title>
+  <title>CV | {meta.name}</title>
 </svelte:head>
 
 <Sidebar />
