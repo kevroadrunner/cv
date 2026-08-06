@@ -3,7 +3,7 @@
   import { page } from '$app/state';
   import { cn } from '$lib/utils';
   import { Button } from '$lib/components/ui/button';
-  import Ghost from '@iconify-svelte/boxicons/ghost';
+  import Rocket from '@iconify-svelte/boxicons/rocket';
   import MailOpen from '@iconify-svelte/boxicons/mail-open';
   import UserIdCard from '@iconify-svelte/boxicons/user-id-card';
   import Timeline from '@iconify-svelte/boxicons/timeline';
@@ -91,7 +91,7 @@
   </nav>
   <div class="mt-auto flex flex-wrap justify-center gap-2 sm:justify-between">
     <Button variant="outline" size="icon" href={meta.social.homepage} target="_blank">
-      <Ghost class="size-5" />
+      <Rocket class="size-5" />
     </Button>
     <Button variant="outline" size="icon" href={meta.social.github} target="_blank">
       <Github class="size-5" />
