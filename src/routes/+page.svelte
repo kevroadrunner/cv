@@ -25,11 +25,12 @@
 
 <section>
   <Headline variant="h1" title={meta.name} />
-  <div class="mt-2 mb-8 flex flex-row gap-x-4">
-    <a class="text-xs underline hover:text-muted-foreground" href={`mailto:${meta.contact.email}`}
+  <div class="mt-2 mb-8 flex flex-row gap-1 text-xs text-muted-foreground">
+    <a class="hover:underline" href={`mailto:${meta.contact.email}`}
       >{meta.contact.email}</a
     >
-    <p class="text-xs text-muted-foreground">{meta.location}</p>
+    <span>•</span>
+    <span>{meta.location}</span>
   </div>
   {#if primarySkills.length}
     <Blockquote class="my-4">
