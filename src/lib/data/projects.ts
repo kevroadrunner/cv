@@ -33,10 +33,15 @@ const projects: ProjectType[] = [
     name: 'gmbroethen',
     description: 'Official website for my local municipality',
     github: 'https://github.com/kevroadrunner/gmbroethen/',
-    // tags: ['Svelte', 'SvelteKit', 'Vercel', 'tailwindcss'],
-    tags: [],
+    tags: ['Vue', 'Nuxt', 'Vercel', 'Tailwind CSS'],
     // demo: 'https://www.gemeinde-broethen.de/',
     demo: 'https://gmbroethen.vercel.app/',
+  },
+  {
+    name: 'next-turn',
+    description: 'Boardgame decision wizard',
+    github: 'https://github.com/kevroadrunner/next-turn/',
+    tags: ['React', 'Next.js', 'Vercel', 'Material UI'],
   },
 ];
 

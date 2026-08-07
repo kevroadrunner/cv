@@ -53,12 +53,11 @@
       a focus on TypeScript, React, and Node.js.
     </p>
     <p class="text-muted-foreground">
-      In recent years, my work has centered on the design, further development, and scaling of
-      complex platforms and search solutions - from architecture and backend services to frontend
-      implementation.
+      In recent years, my work has focused on designing, developing, and scaling complex platforms and
+      search solutions across architecture, backend services, and frontend implementation.
     </p>
     <p class="text-muted-foreground">
-      When needed, I quickly and efficiently familiarize myself with new technologies and integrate
+      I quickly and efficiently familiarize myself with new technologies and integrate
       them pragmatically into existing systems. At the same time, I place great emphasis on
       pragmatic, maintainable software architectures and close collaboration with product, design,
       and development teams to deliver sustainable solutions as a team.

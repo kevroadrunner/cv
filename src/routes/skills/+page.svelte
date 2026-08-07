@@ -9,6 +9,7 @@
   import Headline from '$lib/components/Headline.svelte';
   import * as Alert from '$lib/components/ui/alert';
   import skills, {
+    aiSkills,
     roadmapSkills,
     type SkillType,
   } from '$lib/data/skills';
@@ -106,7 +107,26 @@
         </div>
       {/if}
     {/each}
-    {#if selectedFilters.size === 0 || selectedFilters.has('Favorite')}
+    {#if aiSkills.length}
+      <div>
+        <Headline variant="h3" title="AI" />
+        <Table.Root>
+          <Table.TableBody>
+            {#each aiSkills as skill (skill.name)}
+              <Table.TableRow>
+                <Table.TableCell class="align-top font-medium">
+                  <Badge variant="default">{skill.name}</Badge>
+                </Table.TableCell>
+                <Table.TableCell>
+                  {skill.usage}
+                </Table.TableCell>
+              </Table.TableRow>
+            {/each}
+          </Table.TableBody>
+        </Table.Root>
+      </div>
+    {/if}
+    {#if roadmapSkills.length}
       <div>
         <Headline variant="h3" title="Roadmap" />
         <div class="flex flex-wrap gap-2 p-2">
@@ -119,9 +139,9 @@
     <Alert.Root>
       <InfoCircle />
       <Alert.Description>
-        This is a selection of the technologies I consider most relevant to my work and interests.
-        It's by no means an exhaustive list - I'm always exploring new tools, frameworks and
-        technologies.
+        This is a selection of the technologies I work with most and consider relevant
+        to my professional interests. It is by no means exhaustive, as I am always
+        exploring new tools, frameworks and technologies.
       </Alert.Description>
     </Alert.Root>
   </div>

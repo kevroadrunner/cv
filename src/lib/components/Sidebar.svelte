@@ -90,9 +90,6 @@
     {/each}
   </nav>
   <div class="mt-auto flex flex-wrap justify-center gap-2 sm:justify-between">
-    <Button variant="outline" size="icon" href={meta.social.homepage} target="_blank">
-      <Rocket class="size-5" />
-    </Button>
     <Button variant="outline" size="icon" href={meta.social.github} target="_blank">
       <Github class="size-5" />
     </Button>
@@ -113,6 +110,9 @@
       {:else}
         <Share class="size-5" />
       {/if}
+    </Button>
+    <Button variant="outline" size="icon" href={meta.social.homepage} target="_blank">
+      <Rocket class="size-5" />
     </Button>
   </div>
 </aside>

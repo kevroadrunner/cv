@@ -43,8 +43,8 @@ const skills: Record<string, SkillType[]> = {
       level: 'Familiar',
     },
     {
-      name: 'Angular',
-      level: 'Familiar',
+      name: 'Nuxt',
+      level: 'Experienced',
     },
   ],
   'Backend & Runtime': [
@@ -53,11 +53,6 @@ const skills: Record<string, SkillType[]> = {
       level: 'Expert',
       professional: true,
       favorite: true,
-    },
-    {
-      name: 'Java',
-      level: 'Familiar',
-      professional: true,
     },
     {
       name: 'Express',
@@ -205,6 +200,25 @@ const skills: Record<string, SkillType[]> = {
   ],
 };
 
-export const roadmapSkills: string[] = ['Go', 'Python', 'Kubernetes', 'Rust', 'Netlify'];
+export const roadmapSkills: string[] = ['Go', 'Python', 'Kubernetes', 'Angular', 'Rust', 'Netlify'];
+
+export const aiSkills: { name: string; usage: string }[] = [
+  {
+    name: 'Claude',
+    usage: 'AI-assisted coding, refactoring and code exploration in IDE workflows',
+  },
+  {
+    name: 'Google Gemini',
+    usage: 'AI-assisted coding, debugging and development exploration in IDE workflows',
+  },
+  {
+    name: 'ChatGPT',
+    usage: 'Research, architecture discussions, documentation and problem solving',
+  },
+  {
+    name: 'Perplexity',
+    usage: 'Technical research and documentation lookup',
+  },
+];
 
 export default skills;
