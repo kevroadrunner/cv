@@ -57,10 +57,10 @@
       search solutions across architecture, backend services, and frontend implementation.
     </p>
     <p class="text-muted-foreground">
-      I quickly and efficiently familiarize myself with new technologies and integrate
-      them pragmatically into existing systems. At the same time, I place great emphasis on
-      pragmatic, maintainable software architectures and close collaboration with product, design,
-      and development teams to deliver sustainable solutions as a team.
+      I quickly familiarize myself with new technologies and integrate
+      them pragmatically into existing systems. At the same time, I value maintainable
+      software architectures and close collaboration with product, design,
+      and development teams to deliver sustainable solutions together.
     </p>
     {#if latestJob}
       <Headline variant="h2" title="Experience" />
