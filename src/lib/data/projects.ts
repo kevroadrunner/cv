@@ -9,7 +9,7 @@ export type ProjectType = {
 const projects: ProjectType[] = [
   {
     name: 'kevinruff.de',
-    description: 'My own website',
+    description: 'Personal website of Kevin Ruff.',
     github: 'https://github.com/kevroadrunner/kevinruff.de/',
     tags: ['Svelte', 'SvelteKit', 'Vercel', 'Tailwind CSS'],
     demo: 'https://www.kevinruff.de/',
@@ -41,6 +41,13 @@ const projects: ProjectType[] = [
     name: 'next-turn',
     description: 'Boardgame decision wizard',
     github: 'https://github.com/kevroadrunner/next-turn/',
+    tags: ['React', 'Next.js', 'Vercel', 'Material UI'],
+  },
+  {
+    name: 'fixflow',
+    description:
+      'A lightweight web app for analyzing recurring income and expenses over the course of a year',
+    github: 'https://github.com/kevroadrunner/fixflow/',
     tags: ['React', 'Next.js', 'Vercel', 'Material UI'],
   },
 ];
