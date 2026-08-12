@@ -9,6 +9,7 @@
   import projects from '$lib/data/projects';
   import ProjectCard from '$lib/components/ProjectCard.svelte';
   import Blockquote from '$lib/components/Blockquote.svelte';
+  import HomeSection from '$lib/components/HomeSection.svelte';
 
   const professionalSkills = Object.values(skills)
     .flat()
@@ -63,33 +64,27 @@
       and development teams to deliver sustainable solutions together.
     </p>
     {#if latestJob}
-      <Headline variant="h2" title="Experience" />
-      <JobCard job={latestJob} />
-      <div class="flex justify-center">
-        <Button href="/experience" variant="link">View Full Experience</Button>
-      </div>
+      <HomeSection title="Experience" buttonLabel="View Full Experience" href="/experience">
+        <JobCard job={latestJob} />
+      </HomeSection>
     {/if}
     {#if professionalSkills.length}
-      <Headline variant="h2" title="Skills" />
-      <div class="flex flex-wrap gap-3">
-        {#each professionalSkills as skill (skill)}
-          <Badge>{skill.name}</Badge>
-        {/each}
-      </div>
-      <div class="flex justify-center">
-        <Button href="/skills" variant="link">View All Skills</Button>
-      </div>
+      <HomeSection title="Skills" buttonLabel="View All Skills" href="/skills">
+        <div class="flex flex-wrap gap-3">
+          {#each professionalSkills as skill (skill)}
+            <Badge>{skill.name}</Badge>
+          {/each}
+        </div>
+      </HomeSection>
     {/if}
     {#if projects.length}
-      <Headline variant="h2" title="Projects" />
-      <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        {#each latestProjects as project (project)}
-          <ProjectCard {project} />
-        {/each}
-      </div>
-      <div class="flex justify-center">
-        <Button href="/projects" variant="link">View All Projects</Button>
-      </div>
+      <HomeSection title="Projects" buttonLabel="View All Projects" href="/projects">
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          {#each latestProjects as project (project)}
+            <ProjectCard {project} />
+          {/each}
+        </div>
+      </HomeSection>
     {/if}
   </div>
 </section>
