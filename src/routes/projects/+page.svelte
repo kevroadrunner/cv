@@ -1,10 +1,15 @@
 <script lang="ts">
+  import meta from '$lib/data/meta';
   import Headline from '$lib/components/Headline.svelte';
   import projects from '$lib/data/projects';
   import ProjectCard from '$lib/components/ProjectCard.svelte';
   import InfoCircle from '@iconify-svelte/boxicons/info-circle';
   import * as Alert from '$lib/components/ui/alert';
 </script>
+
+<svelte:head>
+  <title>Projects | CV | {meta.name}</title>
+</svelte:head>
 
 <section>
   <Headline variant="h1" title="Projects" />

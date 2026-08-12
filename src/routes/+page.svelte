@@ -23,6 +23,10 @@
   const latestJob = experience.at(0);
 </script>
 
+<svelte:head>
+  <title>CV | {meta.name}</title>
+</svelte:head>
+
 <section>
   <Headline variant="h1" title={meta.name} />
   <div class="mt-2 mb-8 flex flex-row gap-1 text-xs text-muted-foreground">

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/state';
   import { resolve } from '$app/paths';
+  import meta from '$lib/data/meta';
   import Star from '@iconify-svelte/boxicons/star-filled';
   import InfoCircle from '@iconify-svelte/boxicons/info-circle';
   import * as Table from '$lib/components/ui/table';
@@ -48,6 +49,10 @@
     return resolve(query ? `/skills?${filterName}=${query}` : '/skills');
   };
 </script>
+
+<svelte:head>
+  <title>Skills | CV | {meta.name}</title>
+</svelte:head>
 
 <section>
   <Headline variant="h1" title="Skills" class="mb-4" />
