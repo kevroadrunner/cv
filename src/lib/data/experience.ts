@@ -13,8 +13,8 @@ const experience: JobType[] = [
     tasks: [
       'Responsibility for architecture, further development, and scaling of central web platforms',
       'Development and operation of cloud-based services using TypeScript, Node.js, and AWS',
-      'Design and Implementation of REST APIs and Backend Services',
-      'End-to-End Ownership of Features from Concept to Deployment',
+      'Design and implementation of REST APIs and backend services',
+      'End-to-End ownership of features from concept to deployment',
       'Improving development processes, CI/CD, and testing strategies',
       'Close collaboration with product management, UX, and development teams',
     ],
@@ -24,11 +24,11 @@ const experience: JobType[] = [
     company: 'Immowelt Hamburg GmbH',
     period: '03-2015 - 07-2021',
     tasks: [
-      'Development and Maintenance of Modern Web Applications Using JavaScript and TypeScript',
-      'Implementation of Front-End and Back-End Functionalities',
+      'Development and maintenance of modern web applications using JavaScript and TypeScript',
+      'Implementation of front-end and back-end functionalities',
       'Contributing to the further development of a company-wide design system',
-      'Integration of APIs and Backend Services',
-      'Further Development of Existing Software Architectures',
+      'Integration of APIs and backend services',
+      'Further development of existing software architectures',
       'Ensuring code quality through testing and code reviews',
     ],
   },
@@ -47,7 +47,7 @@ const experience: JobType[] = [
     company: 'Volz ITSC Software GmbH',
     period: '01-2011 - 03-2013',
     tasks: [
-      'Development and Maintenance of Web Applications',
+      'Development and maintenance of web applications',
       'Implementation of functional requirements and debugging',
       'Support for the further development of existing systems',
     ],
@@ -55,13 +55,13 @@ const experience: JobType[] = [
   {
     position: 'Fachinformatiker - Anwendungsentwicklung',
     company: 'Staatliche Gewerbeschule G18',
-    period: 'Aug 2008 - Dez 2010',
+    period: '08-2008 - 12-2010',
     tasks: [],
   },
   {
     position: 'Abitur',
     company: 'Gymnasium Malchin',
-    period: 'Aug 1999 - Mai 2008',
+    period: '08-1999 - 05-2008',
     tasks: [],
   },
 ];

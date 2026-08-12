@@ -200,7 +200,7 @@ const skills: Record<string, SkillType[]> = {
   ],
 };
 
-export const roadmapSkills: string[] = ['Go', 'Python', 'Kubernetes', 'Remix', 'Angular', 'Rust', 'Netlify'];
+export const roadmapSkills: string[] = ['Go', 'Python', 'Kubernetes', 'Remix', 'GraphQL', 'Angular', 'Rust', 'Netlify'];
 
 export const aiSkills: { name: string; usage: string }[] = [
   {
