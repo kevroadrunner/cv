@@ -2,7 +2,7 @@
   import type { Snippet } from 'svelte';
 
   import Headline from '$lib/components/Headline.svelte';
-  import Button from '$lib/components/ui/button';
+  import { Button } from '$lib/components/ui/button';
 
   type HomeSectionProps = {
     title: string;
@@ -20,7 +20,7 @@
   {@render children()}
 </div>
 
-<div class="flex justify-center mt-6">
+<div class="mt-6 flex justify-center">
   <Button {href} variant="outline">
     {buttonLabel}
   </Button>

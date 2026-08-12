@@ -8,11 +8,7 @@
   import { Badge } from '$lib/components/ui/badge';
   import Headline from '$lib/components/Headline.svelte';
   import * as Alert from '$lib/components/ui/alert';
-  import skills, {
-    aiSkills,
-    roadmapSkills,
-    type SkillType,
-  } from '$lib/data/skills';
+  import skills, { aiSkills, roadmapSkills, type SkillType } from '$lib/data/skills';
 
   type Filter = 'Expert' | 'Experienced' | 'Familiar' | 'Professional' | 'Favorite';
 
@@ -139,9 +135,9 @@
     <Alert.Root>
       <InfoCircle />
       <Alert.Description>
-        This is a selection of the technologies I work with most and consider relevant
-        to my professional interests. It is by no means exhaustive, as I am always
-        exploring new tools, frameworks and technologies.
+        This is a selection of the technologies I work with most and consider relevant to my
+        professional interests. It is by no means exhaustive, as I am always exploring new tools,
+        frameworks and technologies.
       </Alert.Description>
     </Alert.Root>
   </div>

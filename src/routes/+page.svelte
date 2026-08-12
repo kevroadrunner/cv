@@ -1,7 +1,6 @@
 <script lang="ts">
   import skills from '$lib/data/skills';
   import { Badge } from '$lib/components/ui/badge';
-  import { Button } from '$lib/components/ui/button';
   import meta from '$lib/data/meta';
   import Headline from '$lib/components/Headline.svelte';
   import experience from '$lib/data/experience';
@@ -27,9 +26,7 @@
 <section>
   <Headline variant="h1" title={meta.name} />
   <div class="mt-2 mb-8 flex flex-row gap-1 text-xs text-muted-foreground">
-    <a class="hover:underline" href={`mailto:${meta.contact.email}`}
-      >{meta.contact.email}</a
-    >
+    <a class="hover:underline" href={`mailto:${meta.contact.email}`}>{meta.contact.email}</a>
     <span>•</span>
     <span>{meta.location}</span>
   </div>
@@ -54,14 +51,14 @@
       a focus on TypeScript, React, and Node.js.
     </p>
     <p class="text-muted-foreground">
-      In recent years, my work has focused on designing, developing, and scaling complex platforms and
-      search solutions across architecture, backend services, and frontend implementation.
+      In recent years, my work has focused on designing, developing, and scaling complex platforms
+      and search solutions across architecture, backend services, and frontend implementation.
     </p>
     <p class="text-muted-foreground">
-      I quickly familiarize myself with new technologies and integrate
-      them pragmatically into existing systems. At the same time, I value maintainable
-      software architectures and close collaboration with product, design,
-      and development teams to deliver sustainable solutions together.
+      I quickly familiarize myself with new technologies and integrate them pragmatically into
+      existing systems. At the same time, I value maintainable software architectures and close
+      collaboration with product, design, and development teams to deliver sustainable solutions
+      together.
     </p>
     {#if latestJob}
       <HomeSection title="Experience" buttonLabel="View Full Experience" href="/experience">

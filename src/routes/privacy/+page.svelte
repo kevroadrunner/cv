@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Headline from '$lib/components/Headline.svelte'
+  import Headline from '$lib/components/Headline.svelte';
 </script>
 
 <Headline variant="h1" title="Datenschutz" />

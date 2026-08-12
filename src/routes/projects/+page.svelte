@@ -8,7 +8,7 @@
 
 <section>
   <Headline variant="h1" title="Projects" />
-  <div class="my-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div class="my-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
     {#each projects as project (project.name)}
       <ProjectCard {project} />
     {/each}
