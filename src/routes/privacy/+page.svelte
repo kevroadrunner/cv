@@ -1,10 +1,11 @@
 <script lang="ts">
   import meta from '$lib/data/meta';
+  import title from '$lib/title';
   import Headline from '$lib/components/Headline.svelte';
 </script>
 
 <svelte:head>
-  <title>Privacy | CV | {meta.name}</title>
+  <title>{title('Privacy')}</title>
 </svelte:head>
 
 <Headline variant="h1" title="Datenschutz" />

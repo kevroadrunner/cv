@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/state';
   import { resolve } from '$app/paths';
+  import title from '$lib/title';
   import meta from '$lib/data/meta';
   import Star from '@iconify-svelte/boxicons/star-filled';
   import InfoCircle from '@iconify-svelte/boxicons/info-circle';
@@ -51,7 +52,7 @@
 </script>
 
 <svelte:head>
-  <title>Skills | CV | {meta.name}</title>
+  <title>{title('Skills')}</title>
 </svelte:head>
 
 <section>

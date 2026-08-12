@@ -1,5 +1,6 @@
 <script lang="ts">
   import meta from '$lib/data/meta';
+  import title from '$lib/title';
   import Headline from '$lib/components/Headline.svelte';
   import projects from '$lib/data/projects';
   import ProjectCard from '$lib/components/ProjectCard.svelte';
@@ -8,7 +9,7 @@
 </script>
 
 <svelte:head>
-  <title>Projects | CV | {meta.name}</title>
+  <title>{title('Projects')}</title>
 </svelte:head>
 
 <section>

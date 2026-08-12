@@ -1,5 +1,6 @@
 <script lang="ts">
   import skills from '$lib/data/skills';
+  import title from '$lib/title';
   import { Badge } from '$lib/components/ui/badge';
   import meta from '$lib/data/meta';
   import Headline from '$lib/components/Headline.svelte';
@@ -24,7 +25,7 @@
 </script>
 
 <svelte:head>
-  <title>CV | {meta.name}</title>
+  <title>{title()}</title>
 </svelte:head>
 
 <section>
