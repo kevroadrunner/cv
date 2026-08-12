@@ -71,7 +71,7 @@
     </div>
     <div class="flex-1 py-4">
       <Headline variant="h3" title={meta.name} />
-      <p class="text-muted-foreground">{meta.position}</p>
+      <p class="text-muted-foreground uppercase">{meta.position}</p>
       {#if meta.availableForWork}
         <Badge variant="destructive">Available for work</Badge>
       {/if}

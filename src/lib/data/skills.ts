@@ -205,11 +205,15 @@ export const roadmapSkills: string[] = ['Go', 'Python', 'Kubernetes', 'Angular',
 export const aiSkills: { name: string; usage: string }[] = [
   {
     name: 'Claude',
-    usage: 'AI-assisted coding, refactoring and code exploration in IDE workflows',
+    usage: 'AI-assisted coding, debugging and development in IDE workflows',
   },
   {
     name: 'Google Gemini',
-    usage: 'AI-assisted coding, debugging and development exploration in IDE workflows',
+    usage: 'AI-assisted coding, debugging and development in IDE workflows',
+  },
+  {
+    name: 'Microsoft Copilot',
+    usage: 'AI-assisted coding, debugging and development in IDE workflows',
   },
   {
     name: 'ChatGPT',
