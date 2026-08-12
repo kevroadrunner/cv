@@ -20,7 +20,7 @@
 <footer class="mb-4 flex gap-1 justify-self-center text-xs text-muted-foreground">
   <Copyright class="size-4" />
   <span>{new Date().getFullYear()}</span>
-  <a href={resolve(meta.social.homepage)} class="hover:underline" target="_blank">Kevin Ruff</a>
+  <a href={meta.social.homepage} class="hover:underline" target="_blank">Kevin Ruff</a>
   {#each navItems as item (item.href)}
     <span>•</span>
     <a
