@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import { resolve } from '$app/path';
+  import { resolve } from '$app/paths';
   import Copyright from '@iconify-svelte/boxicons/copyright';
   import { cn } from '$lib/utils';
   import meta from '$lib/data/meta';
