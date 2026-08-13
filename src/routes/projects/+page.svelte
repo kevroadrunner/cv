@@ -1,5 +1,4 @@
 <script lang="ts">
-  import meta from '$lib/data/meta';
   import title from '$lib/title';
   import Headline from '$lib/components/Headline.svelte';
   import projects from '$lib/data/projects';

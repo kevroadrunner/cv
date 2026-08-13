@@ -8,11 +8,11 @@
   const navItems = [
     {
       name: 'Privacy',
-      href: '/privacy',
+      href: resolve('/privacy'),
     },
     {
       name: 'Legal',
-      href: '/legal',
+      href: resolve('/legal'),
     },
   ];
 </script>
@@ -20,11 +20,11 @@
 <footer class="mb-4 flex gap-1 justify-self-center text-xs text-muted-foreground">
   <Copyright class="size-4" />
   <span>{new Date().getFullYear()}</span>
-  <a href={meta.social.homepage} class="hover:underline" target="_blank">Kevin Ruff</a>
+  <a href={meta.social.homepage} class="hover:underline">Kevin Ruff</a>
   {#each navItems as item (item.href)}
     <span>•</span>
     <a
-      href={resolve(item.href)}
+      href={item.href}
       class={cn('hover:underline', { underline: page.url.pathname === item.href })}>{item.name}</a
     >
   {/each}

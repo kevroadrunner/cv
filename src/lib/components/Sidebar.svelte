@@ -111,7 +111,7 @@
         <Share class="size-5" />
       {/if}
     </Button>
-    <Button variant="outline" size="icon" href={meta.social.homepage} target="_blank">
+    <Button variant="outline" size="icon" href={meta.social.homepage}>
       <Rocket class="size-5" />
     </Button>
   </div>
