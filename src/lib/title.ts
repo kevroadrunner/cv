@@ -1,5 +1,5 @@
 import meta from '$lib/data/meta'
 
-const title = (name?: string) => [name, 'CV', meta.name].filter(i => i).join(' | ')
+const title = (name?: string) => [meta.name, 'CV', name].filter((i) => i).join(' | ');
 
 export default title
