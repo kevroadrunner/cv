@@ -1,9 +1,10 @@
 export type ProjectType = {
   name: string;
   description: string;
+  tags: string[];
   github: string;
   demo?: string;
-  tags: string[];
+  wip?: true;
 };
 
 const projects: ProjectType[] = [
@@ -13,6 +14,7 @@ const projects: ProjectType[] = [
     github: 'https://github.com/kevroadrunner/kevinruff.de/',
     tags: ['Svelte', 'SvelteKit', 'Vercel', 'Tailwind CSS'],
     demo: 'https://www.kevinruff.de/',
+    wip: true,
   },
   {
     name: 'cv',
@@ -36,12 +38,14 @@ const projects: ProjectType[] = [
     tags: ['Vue', 'Nuxt', 'Vercel', 'Tailwind CSS'],
     // demo: 'https://www.gemeinde-broethen.de/',
     demo: 'https://gmbroethen.vercel.app/',
+    wip: true,
   },
   {
     name: 'next-turn',
     description: 'Boardgame decision wizard',
     github: 'https://github.com/kevroadrunner/next-turn/',
     tags: ['React', 'Next.js', 'Vercel', 'Material UI'],
+    wip: true,
   },
   {
     name: 'fixflow',
@@ -49,6 +53,7 @@ const projects: ProjectType[] = [
       'A lightweight web app for analyzing recurring income and expenses over the course of a year',
     github: 'https://github.com/kevroadrunner/fixflow/',
     tags: ['React', 'Next.js', 'Vercel', 'Material UI'],
+    wip: true,
   },
 ];
 

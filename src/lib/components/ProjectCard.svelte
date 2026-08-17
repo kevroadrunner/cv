@@ -13,7 +13,12 @@
 
 <Card.Root>
   <Card.Header>
-    <Card.Title>{project.name}</Card.Title>
+    <Card.Title class="flex">
+      <span class="flex-1">{project.name}</span>
+      {#if project.wip}
+        <Badge variant="destructive">WIP</Badge>
+      {/if}
+    </Card.Title>
     <Card.Description>
       {project.description}
     </Card.Description>
@@ -22,7 +27,7 @@
     {#if project.tags.length}
       <div class="flex flex-wrap gap-2">
         {#each project.tags as tag (tag)}
-          <Badge variant="default">{tag}</Badge>
+          <Badge>{tag}</Badge>
         {/each}
       </div>
     {/if}
@@ -31,7 +36,7 @@
     <Button variant="outline" href={project.github} target="_blank">GitHub</Button>
     <div class="flex-1"></div>
     {#if project.demo}
-      <Button variant="default" href={project.demo} target="_blank">Visit</Button>
+      <Button href={project.demo} target="_blank">Visit</Button>
     {/if}
   </Card.Footer>
 </Card.Root>

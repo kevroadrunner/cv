@@ -11,15 +11,11 @@
   import Blockquote from '$lib/components/Blockquote.svelte';
   import HomeSection from '$lib/components/HomeSection.svelte';
 
-  const professionalSkills = Object.values(skills)
-    .flat()
-    .filter((skill) => skill.professional);
-
-  const primarySkills = professionalSkills.filter((skill) => skill.favorite);
+  const favoriteSkills = Object.values(skills).flat().filter((skill) => skill.favorite);
 
   const MAX_PROJECTS = 4;
 
-  const latestProjects = projects.slice(0, MAX_PROJECTS);
+  const latestProjects = projects.filter(project => !project.wip).slice(0, MAX_PROJECTS);
 
   const latestJob = experience.at(0);
 </script>
@@ -35,11 +31,11 @@
     <span>•</span>
     <span>{meta.location}</span>
   </div>
-  {#if primarySkills.length}
+  {#if favoriteSkills.length}
     <Blockquote class="my-4">
       <p>Building modern web applications with</p>
       <div class="mt-1 flex flex-wrap gap-2">
-        {#each primarySkills as skill (skill.name)}
+        {#each favoriteSkills as skill (skill.name)}
           <Badge>{skill.name}</Badge>
         {/each}
       </div>
@@ -70,10 +66,10 @@
         <JobCard job={latestJob} />
       </HomeSection>
     {/if}
-    {#if professionalSkills.length}
+    {#if favoriteSkills.length}
       <HomeSection title="Skills" buttonLabel="View All Skills" href="/skills">
         <div class="flex flex-wrap gap-3">
-          {#each professionalSkills as skill (skill)}
+          {#each favoriteSkills as skill (skill.name)}
             <Badge>{skill.name}</Badge>
           {/each}
         </div>
