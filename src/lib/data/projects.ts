@@ -5,6 +5,7 @@ export type ProjectType = {
   github: string;
   demo?: string;
   wip?: true;
+  poc?: true;
 };
 
 const projects: ProjectType[] = [
@@ -46,6 +47,7 @@ const projects: ProjectType[] = [
     github: 'https://github.com/kevroadrunner/next-turn/',
     tags: ['React', 'Next.js', 'Vercel', 'Material UI'],
     wip: true,
+    poc: true,
   },
   {
     name: 'fixflow',
@@ -54,6 +56,7 @@ const projects: ProjectType[] = [
     github: 'https://github.com/kevroadrunner/fixflow/',
     tags: ['React', 'Next.js', 'Vercel', 'Material UI'],
     wip: true,
+    poc: true,
   },
 ];
 

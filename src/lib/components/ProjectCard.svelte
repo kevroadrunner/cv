@@ -15,9 +15,14 @@
   <Card.Header>
     <Card.Title class="flex">
       <span class="flex-1">{project.name}</span>
-      {#if project.wip}
-        <Badge variant="destructive">WIP</Badge>
-      {/if}
+      <div class="flex-wrap gap-2">
+        {#if project.wip}
+          <Badge variant="destructive">WIP</Badge>
+        {/if}
+        {#if project.poc}
+          <Badge variant="outline">POC</Badge>
+        {/if}
+      </div>
     </Card.Title>
     <Card.Description>
       {project.description}

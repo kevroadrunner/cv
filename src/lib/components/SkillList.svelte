@@ -7,14 +7,14 @@
   export type SkillListProps = {
     title: string;
     skills: SkillType[];
-  }
+  };
 
-  const { title, skills }: SkillType = $props()
+  const { title, skills }: SkillType = $props();
 </script>
 
 <div class="space-y-2">
-  <Headline variant="h3" title={title} />
-  <div class="flex gap-2 flex-wrap">
+  <Headline variant="h3" {title} />
+  <div class="flex flex-wrap gap-2">
     {#each skills as skill (skill.name)}
       <Badge>
         {skill.name}

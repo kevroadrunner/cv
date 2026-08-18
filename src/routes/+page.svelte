@@ -11,11 +11,13 @@
   import Blockquote from '$lib/components/Blockquote.svelte';
   import HomeSection from '$lib/components/HomeSection.svelte';
 
-  const favoriteSkills = Object.values(skills).flat().filter((skill) => skill.favorite);
+  const favoriteSkills = Object.values(skills)
+    .flat()
+    .filter((skill) => skill.favorite);
 
   const MAX_PROJECTS = 4;
 
-  const latestProjects = projects.filter(project => !project.wip).slice(0, MAX_PROJECTS);
+  const latestProjects = projects.filter((project) => !project.wip).slice(0, MAX_PROJECTS);
 
   const latestJob = experience.at(0);
 </script>
