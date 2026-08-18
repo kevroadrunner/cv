@@ -20,7 +20,7 @@
           <Badge variant="destructive">WIP</Badge>
         {/if}
         {#if project.poc}
-          <Badge variant="outline">POC</Badge>
+          <Badge variant="secondary">POC</Badge>
         {/if}
       </div>
     </Card.Title>

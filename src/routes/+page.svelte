@@ -11,6 +11,10 @@
   import Blockquote from '$lib/components/Blockquote.svelte';
   import HomeSection from '$lib/components/HomeSection.svelte';
 
+  const primarySkills = Object.values(skills)
+    .flat()
+    .filter((skill) => skill.primary);
+
   const favoriteSkills = Object.values(skills)
     .flat()
     .filter((skill) => skill.favorite);
@@ -33,11 +37,11 @@
     <span>•</span>
     <span>{meta.location}</span>
   </div>
-  {#if favoriteSkills.length}
+  {#if primarySkills.length}
     <Blockquote class="my-4">
       <p>Building modern web applications with</p>
       <div class="mt-1 flex flex-wrap gap-2">
-        {#each favoriteSkills as skill (skill.name)}
+        {#each primarySkills as skill (skill.name)}
           <Badge>{skill.name}</Badge>
         {/each}
       </div>
@@ -70,7 +74,7 @@
     {/if}
     {#if favoriteSkills.length}
       <HomeSection title="Skills" buttonLabel="View All Skills" href="/skills">
-        <div class="flex flex-wrap gap-3">
+        <div class="flex flex-wrap gap-2">
           {#each favoriteSkills as skill (skill.name)}
             <Badge>{skill.name}</Badge>
           {/each}

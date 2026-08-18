@@ -1,6 +1,7 @@
 export type SkillType = {
   name: string;
   favorite?: true;
+  primary?: true;
 };
 
 const skills: Record<string, SkillType[]> = {
@@ -8,22 +9,27 @@ const skills: Record<string, SkillType[]> = {
     {
       name: 'TypeScript',
       favorite: true,
+      primary: true,
     },
     {
       name: 'React',
       favorite: true,
+      primary: true,
     },
     {
       name: 'Next.js',
       favorite: true,
+      primary: true,
     },
     {
       name: 'Svelte',
       favorite: true,
+      primary: true,
     },
     {
       name: 'Tailwind CSS',
       favorite: true,
+      primary: true,
     },
     {
       name: 'Material UI',
@@ -33,6 +39,7 @@ const skills: Record<string, SkillType[]> = {
     {
       name: 'Node.js',
       favorite: true,
+      primary: true,
     },
     {
       name: 'Fastify',
