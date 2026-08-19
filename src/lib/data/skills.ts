@@ -150,6 +150,40 @@ const skills: Record<string, SkillType[]> = {
       name: 'Storybook',
     },
   ],
+  'Agile Methods': [
+    {
+      name: 'Scrum',
+    },
+    {
+      name: 'Kanban',
+    },
+    {
+      name: 'Extreme Programming (XP)',
+    },
+  ],
+  'Engineering Practices': [
+    {
+      name: 'CI/CD',
+    },
+    {
+      name: 'Code Reviews',
+    },
+    {
+      name: 'Pair Programming',
+    },
+    {
+      name: 'Automated Testing',
+    },
+    {
+      name: 'Refactoring',
+    },
+    {
+      name: 'Automated Deployments',
+    },
+    {
+      name: 'IaC',
+    },
+  ],
 };
 
 export const roadmapSkills: string[] = [

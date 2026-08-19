@@ -18,7 +18,10 @@ export type MetaType = {
 const meta: MetaType = {
   name: 'Kevin Ruff',
   position: 'Senior Software Engineer',
-  location: 'Bröthen, GER',
+  location: {
+    home: 'Bröthen',
+    work: 'Hamburg',
+  },
   availableForWork: true,
   url: 'https://cv.kevinruff.de/',
   contact: {

@@ -1,12 +1,10 @@
 <script lang="ts">
   import title from '$lib/title';
-  import Star from '@iconify-svelte/boxicons/star-filled';
   import InfoCircle from '@iconify-svelte/boxicons/info-circle';
-  import { Badge } from '$lib/components/ui/badge';
   import Headline from '$lib/components/Headline.svelte';
   import SkillList from '$lib/components/SkillList.svelte';
   import * as Alert from '$lib/components/ui/alert';
-  import skills, { aiSkills, roadmapSkills, type SkillType } from '$lib/data/skills';
+  import skills, { aiSkills, roadmapSkills } from '$lib/data/skills';
 </script>
 
 <svelte:head>

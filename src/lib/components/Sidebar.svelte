@@ -16,7 +16,6 @@
   import LinkedIn from '@iconify-svelte/simple-icons/linkedin';
   import Xing from '@iconify-svelte/simple-icons/xing';
   import Share from '@iconify-svelte/boxicons/share';
-  import Check from '@iconify-svelte/boxicons/check';
   import { Badge } from '$lib/components/ui/badge';
   import meta from '$lib/data/meta';
 
@@ -69,7 +68,7 @@
         <AvatarFallback>KR</AvatarFallback>
       </Avatar>
     </div>
-    <div class="flex-1 py-4">
+    <div class="flex-1 sm:py-4">
       <Headline variant="h3" title={meta.name} />
       <p class="text-muted-foreground uppercase">{meta.position}</p>
       {#if meta.availableForWork}

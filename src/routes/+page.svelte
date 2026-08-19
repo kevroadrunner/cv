@@ -2,6 +2,7 @@
   import skills from '$lib/data/skills';
   import title from '$lib/title';
   import { Badge } from '$lib/components/ui/badge';
+  import { Button } from '$lib/components/ui/button';
   import meta from '$lib/data/meta';
   import Headline from '$lib/components/Headline.svelte';
   import experience from '$lib/data/experience';
@@ -10,6 +11,8 @@
   import ProjectCard from '$lib/components/ProjectCard.svelte';
   import Blockquote from '$lib/components/Blockquote.svelte';
   import HomeSection from '$lib/components/HomeSection.svelte';
+  import Location from '@iconify-svelte/boxicons/laptop';
+  import HomeHeart from '@iconify-svelte/boxicons/home';
 
   const primarySkills = Object.values(skills)
     .flat()
@@ -32,10 +35,20 @@
 
 <section>
   <Headline variant="h1" title={meta.name} />
-  <div class="mt-2 mb-8 flex flex-row gap-1 text-xs text-muted-foreground">
-    <a class="hover:underline" href={`mailto:${meta.contact.email}`}>{meta.contact.email}</a>
-    <span>•</span>
-    <span>{meta.location}</span>
+  <div class="mt-2 mb-8 flex flex-row items-center gap-1">
+    <div class="mr-1 flex gap-2">
+      <Badge variant="outline">
+        <Location />
+        {meta.location.work}
+      </Badge>
+      <Badge variant="outline">
+        <HomeHeart />
+        {meta.location.home}
+      </Badge>
+    </div>
+    <Button variant="link" size="xs" href={`mailto:${meta.contact.email}`}
+      >{meta.contact.email}</Button
+    >
   </div>
   {#if primarySkills.length}
     <Blockquote class="my-4">
