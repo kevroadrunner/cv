@@ -51,7 +51,7 @@
   {#if primarySkills.length}
     <Blockquote class="my-4">
       <p>Building modern web applications with</p>
-      <div class="mt-1 flex flex-wrap gap-2">
+      <div class="mt-1 flex flex-wrap gap-2 not-italic">
         {#each primarySkills as skill (skill.name)}
           <Badge>{skill.name}</Badge>
         {/each}
