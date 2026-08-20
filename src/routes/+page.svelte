@@ -35,20 +35,18 @@
 
 <section>
   <Headline variant="h1" title={meta.name} />
-  <div class="mt-2 mb-8 flex flex-row items-center gap-1">
-    <div class="mr-1 flex gap-2">
-      <Badge variant="outline">
-        <Location />
-        {meta.location.work}
-      </Badge>
-      <Badge variant="outline">
-        <HomeHeart />
-        {meta.location.home}
-      </Badge>
-    </div>
-    <Button variant="link" size="xs" href={`mailto:${meta.contact.email}`}
-      >{meta.contact.email}</Button
-    >
+  <div class="mt-2 mb-8 flex flex-row items-center gap-1 flex-wrap">
+    <Badge variant="outline">
+      <Location />
+      {meta.location.work}
+    </Badge>
+    <Badge variant="outline">
+      <HomeHeart />
+      {meta.location.home}
+    </Badge>
+    <Button variant="link" size="xs" href={`mailto:${meta.contact.email}`}>
+      {meta.contact.email}
+    </Button>
   </div>
   {#if primarySkills.length}
     <Blockquote class="my-4">
