@@ -5,6 +5,7 @@
   import { Button } from '$lib/components/ui/button';
   import Rocket from '@iconify-svelte/boxicons/rocket';
   import MailOpen from '@iconify-svelte/boxicons/mail-open';
+  import Check from '@iconify-svelte/boxicons/check';
   import UserIdCard from '@iconify-svelte/boxicons/user-id-card';
   import Timeline from '@iconify-svelte/boxicons/timeline';
   import Code from '@iconify-svelte/boxicons/code';
@@ -54,7 +55,7 @@
       if (err instanceof DOMException && err.name === 'AbortError') {
         return;
       }
-      console.error('Failed to share URL:', err);
+      console.error('Failed to share:', err);
       shareState = 'errored';
     }
   };
