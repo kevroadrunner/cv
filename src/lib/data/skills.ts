@@ -105,7 +105,7 @@ const skills: Record<string, SkillType[]> = {
       name: 'S3',
     },
     {
-      name: 'Step Functions',
+      name: 'Step Function',
     },
     {
       name: 'SNS',
@@ -192,6 +192,7 @@ export const roadmapSkills: string[] = [
   'Kubernetes',
   'Remix',
   'GraphQL',
+  'Playwright',
   'Angular',
   'Vue',
   'Nuxt',

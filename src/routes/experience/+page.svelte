@@ -11,7 +11,7 @@
 
 <section>
   <Headline variant="h1" title="Experience" />
-  <div class="my-8 space-y-4">
+  <div class="my-8 grid grid-cols-1 gap-4 2xl:grid-cols-2">
     {#each experience as job (job.period)}
       <JobCard {job} />
     {/each}
