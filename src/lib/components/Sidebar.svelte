@@ -6,6 +6,7 @@
   import Rocket from '@iconify-svelte/boxicons/rocket';
   import MailOpen from '@iconify-svelte/boxicons/mail-open';
   import Check from '@iconify-svelte/boxicons/check';
+  import Bug from '@iconify-svelte/boxicons/bug';
   import UserIdCard from '@iconify-svelte/boxicons/user-id-card';
   import Timeline from '@iconify-svelte/boxicons/timeline';
   import Code from '@iconify-svelte/boxicons/code';
@@ -27,36 +28,49 @@
     { label: 'Projects', href: resolve('/projects'), icon: FolderCode },
   ];
 
-  type ShareState = 'idle' | 'copied' | 'errored';
+  type ShareState = 'idle' | 'copied' | 'shared' | 'errored';
 
   let shareState = $state<ShareState>('idle');
+  let timeoutId = $state<number | null>(null);
+
+  const setShareState = (state: ShareState, delay = 3000) => {
+    if (timeoutId) clearTimeout(timeoutId)
+    shareState = state;
+    if (shareState !== 'idle') {
+      timeoutId = setTimeout(() => {
+        shareState = 'idle';
+      }, delay);
+    }
+  }
 
   const share = async (event: MouseEvent) => {
     event.preventDefault();
-
-    shareState = 'idle';
-
+    // Prevent share on active states
+    if (shareState !== 'idle') return;
+    // Reset state
+    setShareState('idle');
     try {
+      // Try to use share feature from os
       if (navigator.share) {
         await navigator.share({
           url: meta.url,
         });
+        setShareState('shared')
+      // Try copy to clipboard as fallback
+      } else if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(meta.url);
+        setShareState('copied')
+      } else {
+        // Sharing not possible
+        setShareState('errored', 2000)
+      }
+    } catch (error) {
+      // User canceled
+      if (error instanceof DOMException && error.name === 'AbortError') {
         return;
       }
-      if (!navigator.clipboard?.writeText) {
-        throw new Error('Clipboard API is not available');
-      }
-      await navigator.clipboard.writeText(meta.url);
-      shareState = 'copied';
-      setTimeout(() => {
-        shareState = 'idle';
-      }, 2000);
-    } catch (err) {
-      if (err instanceof DOMException && err.name === 'AbortError') {
-        return;
-      }
-      console.error('Failed to share:', err);
-      shareState = 'errored';
+      // Something unexpected happened
+      setShareState('errored', 5000)
     }
   };
 </script>
@@ -64,10 +78,12 @@
 <aside class="inset-y-0 flex flex-col space-y-4 bg-accent p-6 sm:fixed sm:w-72">
   <div class="flex gap-4 sm:flex-col">
     <div class="shrink-1">
-      <Avatar class="size-32 sm:size-full">
-        <AvatarImage class="rounded-none sm:rounded-full" src={Me} alt={meta.name} />
-        <AvatarFallback>KR</AvatarFallback>
-      </Avatar>
+      <a href="/">
+        <Avatar class="size-32 sm:size-full">
+          <AvatarImage class="rounded-none sm:rounded-full" src={Me} alt={meta.name} />
+          <AvatarFallback>KR</AvatarFallback>
+        </Avatar>
+      </a>
     </div>
     <div class="flex-1 sm:py-4">
       <Headline variant="h3" title={meta.name} />
@@ -103,10 +119,10 @@
       <MailOpen class="size-5" />
     </Button>
     <Button href={meta.url} variant="outline" size="icon" onclick={share}>
-      {#if shareState === 'copied'}
+      {#if shareState === 'copied' || shareState === 'shared'}
         <Check class="size-5" />
       {:else if shareState === 'errored'}
-        <Share class="size-5 text-destructive" />
+        <Bug class="size-5 text-destructive" />
       {:else}
         <Share class="size-5" />
       {/if}
